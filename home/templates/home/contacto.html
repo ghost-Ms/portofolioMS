@@ -1,0 +1,60 @@
+{% extends "static/base.html" %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'home/css/contacto.css' %}">
+{% endblock %}
+
+{% block content %}
+
+     <!-- Contact Section -->
+    <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+        <h2 class="w3-text-light-grey">Contact Me</h2>
+        <hr style="width:200px" class="w3-opacity">
+        <br>
+        <div class="w3-section">
+              <h4 class="white-text"><i class="fa fa-map-marker fa-fw w3-text-blue w3-xxlarge w3-margin-right"></i><strong> Viseu, Portugal</strong></h4>
+              <h4 class="white-text"><i class="fa fa-phone fa-fw w3-text-blue w3-xxlarge w3-margin-right"></i><strong> Phone: +351 964315510</strong></h4>
+              <h4 class="white-text"><i class="fa fa-envelope fa-fw w3-text-blue w3-xxlarge w3-margin-right"></i><strong> Email: santos.marco@sapo.pt</strong></h4>
+        </div>
+        <br>
+        <br>
+        {% if messages %}
+           {% for message in messages %}
+              <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+           {% endfor %}
+        {% endif %}
+        <h3 class="white-text">Let's get in touch. Send me a message:</h3>
+        <br>
+        <form id="formulario-contato" method="POST" action="{% url 'enviar_mensagem' %}">
+            {% csrf_token %}
+            <p><input class="w3-input w3-padding-16" type="text" placeholder="Nome" required name="nome"></p>
+            <br>
+            <p><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="email"></p>
+            <br>
+            <p><input class="w3-input w3-padding-16" type="text" placeholder="Assunto" required name="assunto"></p>
+            <br>
+            <p><input class="w3-input w3-padding-16" type="text" placeholder="Mensagem" required name="mensagem"></p>
+            <br>
+            <p>
+                <button class="w3-button w3-light-grey w3-padding-large" type="submit">
+                    ENVIAR MENSAGEM
+                </button>
+            </p>
+      </form>
+  </div>
+
+  <div class="w3-padding-large">
+        <br>
+  </div>
+  <footer class="w3-content w3-padding-64 w3-text-grey w3-large" style="position: flex; bottom: 2; width: 100%; padding: 50px; text-align: center;">
+      <i class="fa fa-facebook-official w3-hover-opacity"></i>
+      <i class="fa fa-instagram w3-hover-opacity"></i>
+      <i class="fa fa-snapchat w3-hover-opacity"></i>
+      <i class="fa fa-twitter w3-hover-opacity"></i>
+      <i class="fa fa-linkedin w3-hover-opacity"></i>
+      <p class="w3-medium">Powered by <a href="{% url 'index' %}" target="_blank" class="w3-hover-text-green">Home</a></p>
+      <!-- End footer -->
+ </footer>
+
+{% endblock %}

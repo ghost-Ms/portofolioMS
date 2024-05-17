@@ -1,0 +1,57 @@
+body, h1, h2, h3, h4, h5, h6 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.w3-sidebar {
+    width: 250px;
+    background: #00115d;
+    position: fixed;
+    height: 100%;
+}
+
+/* Estilos para a imagem */
+.w3-sidebar img {
+    width: 100%;
+    height: auto;
+}
+
+/* Estilos para a label */
+.label-name {
+    width: 100%;
+    height: 5%;
+    font-size: 16px;
+    color: orange;
+    margin-bottom: 10px; /* Espaço entre a imagem e a label */
+}
+
+.w3-sidebar a.w3-bar-item.w3-button {
+    background-color: #00002b; /* Cor de fundo verde */
+    color: white; /* Cor do texto branco */
+}
+
+.w3-sidebar a.w3-bar-item.w3-button:hover {
+    background-color: #45a049; /* Cor de fundo verde escuro ao passar o mouse */
+}
+
+/* Estilos para o conteúdo principal */
+#main {
+    margin-left: 250px;
+    padding: 16px;
+}
+
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {
+    #main {
+        margin-left: 0; /* Remova a margem à esquerda em telas pequenas */
+    }
+}
+
+
+
+
+
+
+

@@ -1,0 +1,88 @@
+{% extends "static/base.html" %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'home/css/sobre.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="w3-padding-large">
+        <div class="w3-content w3-justify w3-text-blue">
+            <h1 class="w3-padding-16 w3-text-light-red w3-xxxlarge"><strong>My Skills</strong></h1>
+            <br>
+            <h2 class="w3-wide"><strong>C++</strong></h2>
+            <div class="w3-white">
+                  <div class="w3-green" style="height:30px;width:70%; text-align: right;">70%</div>
+            </div>
+            <br>
+            <br>
+            <h2 class="w3-wide"><strong>Web Html/Css/Javascript</strong></h2>
+            <div class="w3-white">
+                  <div class="w3-yellow" style="height:30px;width:65%; text-align: right;">65%</div>
+            </div>
+            <br>
+            <br>
+            <h2 class="w3-wide"><strong>Java</strong></h2>
+            <div class="w3-white">
+                  <div class="w3-green" style="height:30px;width:85%; text-align: right;">85%</div>
+            </div>
+            <br>
+            <br>
+            <h2 class="w3-wide"><strong>Python</strong></h2>
+            <div class="w3-white">
+                  <div class="w3-green" style="height:30px;width:85%; text-align: right;">85%</div>
+            </div>
+            <br>
+            <br>
+            <h2 class="w3-wide"><strong>Redes</strong></h2>
+            <div class="w3-white">
+                  <div class="w3-green" style="height:30px;width:70%; text-align: right;">70%</div>
+            </div>
+            <br>
+            <br>
+            <h2 class="w3-wide"><strong>SQL</strong></h2>
+            <div class="w3-white">
+                  <div class="w3-yellow" style="height:30px;width:60%; text-align: right;">60%</div>
+            </div>
+            <br>
+            <br>
+            <div class="container">
+                <br>
+                <br>
+            </div>
+            <br>
+            <br>
+
+            <div class="w3-row w3-center w3-padding-10 w3-section w3-light-blue " >
+                  <div class="w3-quarter w3-section">
+                    <span class="w3-xlarge">22</span><br>
+                    Colegas
+                  </div>
+                  <div class="w3-quarter w3-section">
+                    <span class="w3-xlarge">4</span><br>
+                    Projectos
+                  </div>
+                  <div class="w3-quarter w3-section">
+                    <span class="w3-xlarge">10</span><br>
+                    Formadores
+                  </div>
+                  <div class="w3-quarter w3-section">
+                    <span class="w3-xlarge">1300H</span><br>
+                    Horas
+                  </div>
+            </div>
+        </div>
+    </div>
+    <div class="w3-padding-large">
+        <br>
+    </div>
+    <footer class="w3-content w3-padding-64 w3-text-grey w3-large" style="position: flex; bottom: 2; width: 100%; padding: 50px; text-align: center;">
+        <i class="fa fa-facebook-official w3-hover-opacity"></i>
+        <i class="fa fa-instagram w3-hover-opacity"></i>
+        <i class="fa fa-snapchat w3-hover-opacity"></i>
+        <i class="fa fa-twitter w3-hover-opacity"></i>
+        <i class="fa fa-linkedin w3-hover-opacity"></i>
+        <p class="w3-medium">Powered by <a href="{% url 'index' %}" target="_blank" class="w3-hover-text-green">Home</a></p>
+        <!-- End footer -->
+  </footer>
+{% endblock %}

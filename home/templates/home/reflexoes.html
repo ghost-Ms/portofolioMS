@@ -1,0 +1,345 @@
+{% extends "static/base.html" %}
+{% load static %}
+
+{% block head %}
+
+    <link rel="stylesheet" href="{% static 'home/css/reflexoes.css' %}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="{% static 'home/js/reflexoes.js' %}"></script>
+
+{% endblock %}
+
+{% block content %}
+    <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+        <h1 class="w3-jumbo"><span class="w3-hide-small"></span> Marco Santos</h1>
+        <h3>Programador de Informática</h3>
+
+
+    </header>
+     <div class="w3-padding-large">
+          <div class="container mt-3">
+               <h1 align="center"><strong>Reflexões das Unidades de Formação de Curta Duração</strong></h1>
+               <h2 align="center"><strong>(UFCD'S)</strong></h2>
+                <br>
+                <br>
+            <!-- Início da linha -->
+                <div class="row">
+                  <!-- Card 1 -->
+                      <div class="col-md-3">
+                            <div class="card mb-3" style="width:100%">
+                                  <img src="{% static '/img/LogosMac-Linux-Windows.jpg' %}" class="card-img-top" alt="Card Image">
+                                  <div class="card-body  text-center" style="background-color: #7fff43;">
+                                      <h3 class="card-title"><span class="badge rounded-pill bg-info">UFCD-0797</span></h3>
+                                      <p class="card-text"><strong>Sistemas Operativos-Tipologias</strong></p>
+                                      <a href="{% url 'abrir_pdf' 'PRA0797.pdf' %}" class="btn btn-lg btn-primary" >Abrir PDF</a>
+                                  </div>
+                            </div>
+                      </div>
+                      <!-- Card 2 -->
+                      <div class="col-md-3">
+                            <div class="card mb-3" style="width:100%">
+                                  <img src="{% static '/img/utilitarios.png' %}" class="card-img-top" alt="Card Image">
+                                  <div class="card-body text-center" style="background-color: #7fff43;">
+                                      <h3 class="card-title"><span class="badge rounded-pill bg-warning">UFCD-0798</span></h3>
+                                      <p class="card-text"><strong>Utilitários</strong></p>
+                                      <a href="{% url 'abrir_pdf' 'PRA0798.pdf' %}" class="btn btn-lg btn-primary">Abrir PDF</a>
+                                  </div>
+                            </div>
+                      </div>
+                       <!-- Card 3 -->
+                      <div class="col-md-3">
+                            <div class="card mb-3" style="width:100%">
+                                  <img src="{% static '/img/redeLocal.jpeg' %}" class="card-img-top" alt="Card Image">
+                                  <div class="card-body text-center" style="background-color: #7fff43;" >
+                                      <h3 class="card-title"><span class="badge rounded-pill bg-danger">UFCD-0799</span></h3>
+                                      <p class="card-text"><strong>Sistemas de Rede Local</strong></p>
+                                      <a href="{% url 'abrir_pdf' 'PRA0799.pdf' %}" class="btn btn-lg btn-primary">Abrir PDF</a>
+                                  </div>
+                            </div>
+                      </div>
+                     <!-- Card 4 -->
+                      <div class="col-md-3">
+                            <div class="card mb-3" style="width:100%">
+                                  <img src="{% static '/img/servicosRede.jpeg' %}" class="card-img-top" alt="Card Image">
+                                  <div class="card-body text-center" style="background-color: #7fff43;">
+                                      <h3 class="card-title"><span class="badge rounded-pill bg-primary">UFCD-0800</span></h3>
+                                      <p class="card-text"><strong>Serviços Adicionais de Rede</strong></p>
+                                      <a href="{% url 'abrir_pdf' 'PRA0800.pdf' %}" class="btn btn-lg btn-primary">Abrir PDF</a>
+                                  </div>
+                            </div>
+                      </div>
+                  <!-- Adicione mais cards conforme necessário -->
+                      <div class="container">
+                        <br>
+                      </div>
+                      <!-- Card 5 -->
+                      <div class="col-md-3">
+                            <div class="card mb-3" style="width:100%">
+                                  <img src="{% static '/img/redesLocais.jpeg' %}" class="card-img-top" alt="Card Image">
+                                  <div class="card-body text-center" style="background-color: #7fff43;">
+                                      <h3 class="card-title"><span class="badge rounded-pill bg-success">UFCD-0801</span></h3>
+                                      <p class="card-text"><strong>Administração de Redes Locais</strong></p>
+                                      <a href="{% url 'abrir_pdf' 'PRA0801.pdf' %}" class="btn btn-lg btn-primary">Abrir PDF</a>
+                                  </div>
+                            </div>
+                      </div>
+                     <!-- Card 6 -->
+                      <div class="col-md-3">
+                            <div class="card mb-3" style="width:100%">
+                                  <img src="{% static '/img/ProcessamentoComp..jpeg' %}" class="card-img-top" alt="Card Image">
+                                  <div class="card-body text-center" style="background-color: #7fff43;">
+                                      <h3 class="card-title"><span class="badge rounded-pill bg-danger">UFCD-0802</span></h3>
+                                      <p class="card-text"><strong>Processamento Computacional</strong></p>
+                                      <a href="{% url 'abrir_pdf' 'PRA0802.pdf' %}" class="btn btn-lg btn-primary">Abrir PDF</a>
+                                  </div>
+                            </div>
+                      </div>
+                    <!-- Card 7 -->
+                      <div class="col-md-3">
+                            <div class="card mb-3" style="width:100%">
+                                  <img src="{% static '/img/algoritmo.jpeg' %}" class="card-img-top" alt="Card Image">
+                                  <div class="card-body text-center" style="background-color: #7fff43;">
+                                      <h3 class="card-title"><span class="badge rounded-pill bg-info">UFCD-0804</span></h3>
+                                      <p class="card-text"><strong>Algoritmos</strong></p>
+                                      <a href="{% url 'abrir_pdf' 'PRA0804.pdf' %}" class="btn btn-lg btn-primary">Abrir PDF</a>
+                                  </div>
+                            </div>
+                      </div>
+                     <!-- Card 8 -->
+                      <div class="col-md-3">
+                            <div class="card mb-3" style="width:100%">
+                                  <img src="{% static '/img/estruturaDados.jpeg' %}" class="card-img-top" alt="Card Image">
+                                  <div class="card-body text-center" style="background-color: #7fff43;">
+                                      <h3 class="card-title"><span class="badge rounded-pill bg-warning">UFCD-0805</span></h3>
+                                      <p class="card-text"><strong>Estrutura de Dados</strong></p>
+                                      <a href="{% url 'abrir_pdf' 'PRA0805.pdf' %}" class="btn btn-lg btn-primary">Abrir PDF</a>
+                                  </div>
+                            </div>
+                      </div>
+                      <div class="container">
+                        <br>
+                      </div>
+                     <!-- Card 9 -->
+                      <div class="col-md-3">
+                            <div class="card mb-3" style="width:100%">
+                                  <img src="{% static '/img/PrincipiosProgramacao.jpeg' %}" class="card-img-top" alt="Card Image">
+                                  <div class="card-body text-center" style="background-color: #7fff43;">
+                                      <h3 class="card-title"><span class="badge rounded-pill bg-warning">UFCD-0806</span></h3>
+                                      <p class="card-text"><strong>Principios Metodológicos Programação</strong></p>
+                                      <a href="{% url 'abrir_pdf' 'PRA0806.pdf' %}" class="btn btn-lg btn-primary">Abrir PDF</a>
+                                  </div>
+                            </div>
+                      </div>
+                     <!-- Card 10 -->
+                      <div class="col-md-3">
+                            <div class="card mb-3" style="width:100%">
+                                  <img src="{% static '/img/C++.jpeg' %}" class="card-img-top" alt="Card Image">
+                                  <div class="card-body text-center" style="background-color: #7fff43;">
+                                      <h3 class="card-title"><span class="badge rounded-pill bg-success">UFCD-0809</span></h3>
+                                      <p class="card-text"><strong>Programação C++ - Fundamentos</strong></p>
+                                      <a href="{% url 'abrir_pdf' 'PRA0809.pdf' %}" class="btn btn-lg btn-primary">Abrir PDF</a>
+                                  </div>
+                            </div>
+                      </div>
+                     <!-- Card 11 -->
+                      <div class="col-md-3">
+                            <div class="card mb-3" style="width:100%">
+                                  <img src="{% static '/img/C++Avancado.jpeg' %}" class="card-img-top" alt="Card Image">
+                                  <div class="card-body text-center" style="background-color: #7fff43;">
+                                      <h3 class="card-title"><span class="badge rounded-pill bg-primary">UFCD-0810</span></h3>
+                                      <p class="card-text"><strong>Programação C++ - Avançada</strong></p>
+                                      <a href="{% url 'abrir_pdf' 'PRA0810.pdf' %}" class="btn btn-lg btn-primary">Abrir PDF</a>
+                                  </div>
+                            </div>
+                      </div>
+                     <!-- Card 12 -->
+                      <div class="col-md-3">
+                            <div class="card mb-3" style="width:100%">
+                                  <img src="{% static '/img/AnaliseSistemas.jpeg' %}" class="card-img-top" alt="Card Image">
+                                  <div class="card-body text-center" style="background-color: #7fff43;">
+                                      <h3 class="card-title"><span class="badge rounded-pill bg-danger">UFCD-0811</span></h3>
+                                      <p class="card-text"><strong>Análise de Sistemas</strong></p>
+                                      <a href="{% url 'abrir_pdf' 'PRA0811.pdf' %}" class="btn btn-lg btn-primary">Abrir PDF</a>
+                                  </div>
+                            </div>
+                      </div>
+                      <div class="container">
+                        <br>
+                      </div>
+                     <!-- Card 13 -->
+                      <div class="col-md-3">
+                            <div class="card mb-3" style="width:100%">
+                                  <img src="{% static '/img/Java.jpeg' %}" class="card-img-top" alt="Card Image">
+                                  <div class="card-body text-center" style="background-color: #7fff43;">
+                                      <h3 class="card-title"><span class="badge rounded-pill bg-info">UFCD-0816</span></h3>
+                                      <p class="card-text"><strong>Programação Sistemas-Java</strong></p>
+                                      <a href="{% url 'abrir_pdf' 'PRA0816.pdf' %}" class="btn btn-lg btn-primary">Abrir PDF</a>
+                                  </div>
+                            </div>
+                      </div>
+                    <!-- Card 14 -->
+                      <div class="col-md-3">
+                            <div class="card mb-3" style="width:100%">
+                                  <img src="{% static '/img/SqlFundamentos.jpeg' %}" class="card-img-top" alt="Card Image">
+                                  <div class="card-body text-center" style="background-color: #7fff43;">
+                                      <h3 class="card-title"><span class="badge rounded-pill bg-danger">UFCD-10788</span></h3>
+                                      <p class="card-text"><strong>Fundamentos da Linguagem SQL</strong></p>
+                                      <a href="{% url 'abrir_pdf' 'PRA10788.pdf' %}" class="btn btn-lg btn-primary">Abrir PDF</a>
+                                  </div>
+                            </div>
+                      </div>
+                    <!-- Card 15 -->
+                      <div class="col-md-3">
+                            <div class="card mb-3" style="width:100%">
+                                  <img src="{% static '/img/ProjetoProgramacao.jpeg' %}" class="card-img-top" alt="Card Image">
+                                  <div class="card-body text-center" style="background-color: #7fff43;">
+                                      <h3 class="card-title"><span class="badge rounded-pill bg-warning">UFCD-10788</span></h3>
+                                      <p class="card-text"><strong>Projeto de Programação</strong></p>
+                                      <a href="{% url 'abrir_pdf' 'PRA.pdf' %}" class="btn btn-lg btn-primary">Abrir PDF</a>
+                                  </div>
+                            </div>
+                      </div>
+                    <!-- Card 16 -->
+                      <div class="col-md-3">
+                            <div class="card mb-3" style="width:100%">
+                                  <img src="{% static '/img/JavaWeb.jpeg' %}" class="card-img-top" alt="Card Image">
+                                  <div class="card-body text-center" style="background-color: #7fff43;">
+                                      <h3 class="card-title"><span class="badge rounded-pill bg-primary">UFCD-10791</span></h3>
+                                      <p class="card-text"><strong>Aplicações WEB - Java</strong></p>
+                                      <a href="{% url 'abrir_pdf' 'PRA .pdf' %}" class="btn btn-lg btn-primary">Abrir PDF</a>
+                                  </div>
+                            </div>
+                      </div>
+                      <div class="container">
+                        <br>
+                      </div>
+                    <!-- Card 17 -->
+                      <div class="col-md-3">
+                            <div class="card mb-3" style="width:100%">
+                                  <img src="{% static '/img/AspNet.jpeg' %}" class="card-img-top" alt="Card Image">
+                                  <div class="card-body text-center" style="background-color: #7fff43;">
+                                      <h3 class="card-title"><span class="badge rounded-pill bg-success">UFCD-10792</span></h3>
+                                      <p class="card-text"><strong>Programação Asp.Net Core MVC</strong></p>
+                                      <a href="{% url 'abrir_pdf' 'PRA10792.pdf' %}" class="btn btn-lg btn-primary">Abrir PDF</a>
+                                  </div>
+                            </div>
+                      </div>
+                    <!-- Card 18 -->
+                      <div class="col-md-3">
+                            <div class="card mb-3" style="width:100%">
+                                  <img src="{% static '/img/PythonFundament.jpeg' %}" class="card-img-top" alt="Card Image">
+                                  <div class="card-body text-center" style="background-color: #7fff43;">
+                                      <h3 class="card-title"><span class="badge rounded-pill bg-primary">UFCD-10793</span></h3>
+                                      <p class="card-text"><strong>Fundamentos de Python</strong></p>
+                                      <a href="{% url 'abrir_pdf' 'PRA10793.pdf' %}" class="btn btn-lg btn-primary">Abrir PDF</a>
+                                  </div>
+                            </div>
+                      </div>
+                    <!-- Card 19 -->
+                      <div class="col-md-3">
+                            <div class="card mb-3" style="width:100%">
+                                  <img src="{% static '/img/PythonAvancado.jpeg' %}" class="card-img-top" alt="Card Image">
+                                  <div class="card-body text-center" style="background-color: #7fff43;">
+                                      <h3 class="card-title"><span class="badge rounded-pill bg-danger">UFCD-10794</span></h3>
+                                      <p class="card-text"><strong>Programação Avançada com Python</strong></p>
+                                      <a href="{% url 'abrir_pdf' 'PRA10794.pdf' %}" class="btn btn-lg btn-primary">Abrir PDF</a>
+                                  </div>
+                            </div>
+                      </div>
+                    <!-- Card 20 -->
+                      <div class="col-md-3">
+                            <div class="card mb-3" style="width:100%">
+                                  <img src="{% static '/img/segurancaSofware.jpeg' %}" class="card-img-top" alt="Card Image">
+                                  <div class="card-body text-center" style="background-color: #7fff43;">
+                                      <h3 class="card-title"><span class="badge rounded-pill bg-info">UFCD-10795</span></h3>
+                                      <p class="card-text"><strong>Segurança Desenvolvimento Software</strong></p>
+                                      <a href="{% url 'abrir_pdf' 'PRA .pdf' %}" class="btn btn-lg btn-primary">Abrir PDF</a>
+                                  </div>
+                            </div>
+                      </div>
+                      <div class="container">
+                        <br>
+                      </div>
+                    <!-- Card 21 -->
+                      <div class="col-md-3">
+                            <div class="card mb-3" style="width:100%">
+                                  <img src="{% static '/img/AdministracaoSistemasIntr.jpeg' %}" class="card-img-top" alt="Card Image">
+                                  <div class="card-body text-center" style="background-color: #7fff43;">
+                                      <h3 class="card-title"><span class="badge rounded-pill bg-primary">UFCD-10871</span></h3>
+                                      <p class="card-text"><strong>Introdução à Administração de Sistemas</strong></p>
+                                      <a href="{% url 'abrir_pdf' 'PRA10871.pdf' %}" class="btn btn-lg btn-primary">Abrir PDF</a>
+                                  </div>
+                            </div>
+                      </div>
+                    <!-- Card 22 -->
+                      <div class="col-md-3">
+                            <div class="card mb-3" style="width:100%">
+                                  <img src="{% static '/img/AdminisSistemas.jpeg' %}" class="card-img-top" alt="Card Image">
+                                  <div class="card-body text-center" style="background-color: #7fff43;">
+                                      <h3 class="card-title"><span class="badge rounded-pill bg-warning">UFCD-10872</span></h3>
+                                      <p class="card-text"><strong>Administração de Sistemas</strong></p>
+                                      <a href="{% url 'abrir_pdf' 'PRA10872.pdf' %}" class="btn btn-lg btn-primary">Abrir PDF</a>
+                                  </div>
+                            </div>
+                      </div>
+                    <!-- Card 23 -->
+                      <div class="col-md-3">
+                            <div class="card mb-3" style="width:100%">
+                                  <img src="{% static '/img/Cloud.jpeg' %}" class="card-img-top" alt="Card Image">
+                                  <div class="card-body text-center" style="background-color: #7fff43;">
+                                      <h3 class="card-title"><span class="badge rounded-pill bg-danger">UFCD-10873</span></h3>
+                                      <p class="card-text"><strong>Arquitetura de Sistemas em Cloud</strong></p>
+                                      <a href="{% url 'abrir_pdf' 'PRA .pdf' %}" class="btn btn-lg btn-primary">Abrir PDF</a>
+                                  </div>
+                            </div>
+                      </div>
+                    <!-- Card 24 -->
+                      <div class="col-md-3">
+                            <div class="card mb-3" style="width:100%">
+                                  <img src="{% static '/img/SqlAdministracaoBD.jpeg' %}" class="card-img-top" alt="Card Image">
+                                  <div class="card-body text-center" style="background-color: #7fff43;">
+                                      <h3 class="card-title"><span class="badge rounded-pill bg-success">UFCD-3933</span></h3>
+                                      <p class="card-text"><strong>Administração BD para Programadores</strong></p>
+                                      <a href="{% url 'abrir_pdf' 'PRA3933.pdf' %}" class="btn btn-lg btn-primary">Abrir PDF</a>
+                                  </div>
+                            </div>
+                      </div>
+                      <div class="container">
+                        <br>
+                      </div>
+                      <div class="col-md-3">
+                            <div class="card mb-3" style="width:100%">
+                                  <img src="{% static '/img/C#.jpeg' %}" class="card-img-top" alt="Card Image">
+                                  <div class="card-body text-center" style="background-color: #7fff43;">
+                                      <h3 class="card-title"><span class="badge rounded-pill bg-warning">UFCD-3935</span></h3>
+                                      <p class="card-text"><strong>Programação em C#</strong></p>
+                                      <a href="{% url 'abrir_pdf' 'PRA3935.pdf' %}" class="btn btn-lg btn-primary">Abrir PDF</a>
+                                  </div>
+                            </div>
+                      </div>
+                      <div class="col-md-3">
+                            <div class="card mb-3" style="width:100%">
+                                  <img src="{% static '/img/NocoesBasicas.jpeg' %}" class="card-img-top" alt="Card Image">
+                                  <div class="card-body text-center" style="background-color: #7fff43;">
+                                      <h3 class="card-title"><span class="badge rounded-pill bg-success">UFCD-7846</span></h3>
+                                      <p class="card-text"><strong>Informática-Noções Básicas</strong></p>
+                                      <a href="{% url 'abrir_pdf' 'PRA7846.pdf' %}" class="btn btn-lg btn-primary">Abrir PDF</a>
+                                  </div>
+                            </div>
+                      </div>
+                </div>
+            <!-- Fim da linha -->
+          </div>
+    </div>
+    <br>
+    <br>
+    <footer class="w3-content w3-padding-64 w3-text-grey w3-large" style="position: flex; bottom: 0; width: 100%; padding: 50px; text-align: center;">
+        <i class="fa fa-facebook-official w3-hover-opacity"></i>
+        <i class="fa fa-instagram w3-hover-opacity"></i>
+        <i class="fa fa-twitter w3-hover-opacity"></i>
+        <i class="fa fa-linkedin w3-hover-opacity"></i>
+        <p class="w3-medium">Powered by <a href="{% url 'index' %}" target="_blank" class="w3-hover-text-green">Home</a></p>
+        <!-- End footer -->
+    </footer>
+
+{% endblock %}
